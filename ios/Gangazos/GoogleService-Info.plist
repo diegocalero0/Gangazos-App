@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>563772293434-tekt82t786nrvha32cqit1mhgn73j5eb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.563772293434-tekt82t786nrvha32cqit1mhgn73j5eb</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>563772293434-fcvqr5oj1bubnhn8ppvcdv9vrps54g9r.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCZagIg1xQIWOVncikwdIPc9mQUk0u8jgk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>563772293434</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.Gangazos</string>
+	<key>PROJECT_ID</key>
+	<string>gangazos-28ba9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gangazos-28ba9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:563772293434:ios:bc500711f81ee411</string>
+	<key>DATABASE_URL</key>
+	<string>https://gangazos-28ba9.firebaseio.com</string>
+</dict>
+</plist>

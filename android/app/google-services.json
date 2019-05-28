@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "563772293434",
+    "firebase_url": "https://gangazos-28ba9.firebaseio.com",
+    "project_id": "gangazos-28ba9",
+    "storage_bucket": "gangazos-28ba9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563772293434:android:ca777d9c2c59e9ab",
+        "android_client_info": {
+          "package_name": "com.gangazos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563772293434-fcvqr5oj1bubnhn8ppvcdv9vrps54g9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gangazos",
+            "certificate_hash": "2137095ec07383fcf65bf8d9669147ce40591619"
+          }
+        },
+        {
+          "client_id": "563772293434-me4jqpakviag354dabh2m4ddhd0kt4dt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrqj5vkhT6_YoErQFOZ5Zx0xgah8OuZWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563772293434-me4jqpakviag354dabh2m4ddhd0kt4dt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
