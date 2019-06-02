@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {TouchableOpacity, Image, Dimensions, StatusBar, Platform, StyleSheet, Text, View, FlatList} from 'react-native';
+import {TouchableOpacity, Image, Dimensions, StatusBar, Platform, StyleSheet, Text, View, FlatList, ScrollView, Linking} from 'react-native';
 
 import Header from './Header'
 
@@ -67,13 +67,15 @@ export default class Coupons extends Component {
                 style={{width: width, height: width * 576 / 1024}}
                 source={{uri: coupon.imagen}}
                 />
-
-                <View style = {styles.infoCoupon}>
+                <View style = {styles.infoCouponIndicador}>
                     <View style = {styles.indicator}>
                         <Text style = {styles.indicatorText}>
                             {index + 1 + ' de ' + this.state.coupons.length}
                         </Text>
                     </View>
+                </View>
+                <ScrollView contentContainerStyle = {styles.infoCoupon}>
+                    
 
                     <Text style = {styles.nameCoupon}>
                         {coupon.nombre}
@@ -100,7 +102,7 @@ export default class Coupons extends Component {
                         </Text>
                     </TouchableOpacity>
 
-                </View>
+                </ScrollView>
             </View>
         )
     }
@@ -148,6 +150,13 @@ export default class Coupons extends Component {
                         renderItem={({item, index}) => this.renderCoupon(item, index)}
                     />
                 </View>
+                <TouchableOpacity style = {styles.privacy}onPress = {() => {
+                        Linking.openURL('https://gangazos.herokuapp.com/politicas').catch((err) => console.error('An error occurred', err));
+                    }}>
+                        <Text style = {styles.privacyText}>
+                            Politicas de privacidad
+                        </Text>
+                    </TouchableOpacity>
             </View>
         );
     }
@@ -209,7 +218,13 @@ const styles = StyleSheet.create({
   },
 
   infoCoupon: {
-    flex: 1,
+    backgroundColor: '#f7c00b',
+    alignItems: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 20
+  },
+
+  infoCouponIndicador: {
     backgroundColor: '#f7c00b',
     alignItems: 'center',
     paddingVertical: 5,
@@ -282,6 +297,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     backgroundColor: '#f7c00b'
-  }
+  },
+
+  privacy: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 20,
+    alignSelf: 'stretch',
+    backgroundColor: '#f7c00b'
+  },
+
+  privacyText: {
+    fontSize: 10,
+  },
 
 });

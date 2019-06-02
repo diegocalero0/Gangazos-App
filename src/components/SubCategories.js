@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {TouchableOpacity, ScrollView, Image, Dimensions, StatusBar, Platform, StyleSheet, Text, View, FlatList} from 'react-native';
+import {TouchableOpacity, ScrollView, Image, Dimensions, StatusBar, Platform, StyleSheet, Text, View, Linking} from 'react-native';
 
 import Splash from './Splash'
 import Header from './Header'
@@ -89,6 +89,15 @@ export default class Categories extends Component {
                             )
                         })}
                     </ScrollView>
+
+                    <TouchableOpacity style = {styles.privacy}onPress = {() => {
+                        Linking.openURL('https://gangazos.herokuapp.com/politicas').catch((err) => console.error('An error occurred', err));
+                    }}>
+                        <Text style = {styles.privacyText}>
+                            Politicas de privacidad
+                        </Text>
+                    </TouchableOpacity>
+
                 </View>
             </View>
         );
@@ -165,6 +174,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#260a81',
     marginRight: 10,
     borderRadius: 25
-}
+},
+
+privacy: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 20
+  },
+
+  privacyText: {
+    fontSize: 10
+  },
 
 });

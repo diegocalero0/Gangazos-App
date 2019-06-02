@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Dimensions, StatusBar, Platform, StyleSheet, Text, View, FlatList} from 'react-native';
+import {Dimensions, StatusBar, Platform, StyleSheet, Text, View, TouchableOpacity, Linking} from 'react-native';
 
 import MapView, { PROVIDER_GOOGLE , Marker} from 'react-native-maps';
 import Header from './Header'
@@ -68,6 +68,14 @@ export default class MapCoupon extends Component {
                     </Text>
                 </View>
 
+                <TouchableOpacity style = {styles.privacy}onPress = {() => {
+                        Linking.openURL('https://gangazos.herokuapp.com/politicas').catch((err) => console.error('An error occurred', err));
+                    }}>
+                        <Text style = {styles.privacyText}>
+                            Politicas de privacidad
+                        </Text>
+                </TouchableOpacity>
+
             </View>
         );
     }
@@ -99,6 +107,16 @@ const styles = StyleSheet.create({
       fontSize: 16,
       color: 'white',
       padding: 2
-  }
+  },
 
+  privacy: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 20
+  },
+
+  privacyText: {
+    fontSize: 10,
+    color: 'white'
+  },
 });

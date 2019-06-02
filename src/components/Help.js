@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, StyleSheet, Image, View, TouchableOpacity, Dimensions,Platform} from 'react-native';
+import {ScrollView, StyleSheet, Image, View, TouchableOpacity, Dimensions,Platform, Linking} from 'react-native';
 
 import Icon from 'react-native-ionicons'
 
@@ -99,6 +99,16 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: 'flex-end',
       paddingRight: 10
-  }
+  },
+
+  privacy: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 20
+  },
+
+  privacyText: {
+    fontSize: 10
+  },
 
 });

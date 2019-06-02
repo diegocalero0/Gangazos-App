@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {TouchableOpacity, Image, Dimensions, StatusBar, Platform, StyleSheet, Text, View, FlatList} from 'react-native';
+import {TouchableOpacity, Image, Dimensions, StatusBar, Platform, StyleSheet, Text, View, ScrollView, Linking} from 'react-native';
 
 import Header from './Header'
 import Icon from 'react-native-ionicons'
@@ -64,7 +64,7 @@ export default class Coupon extends Component {
                 source={{uri: coupon.imagen}}
                 />
 
-                <View style = {styles.infoCoupon}>
+                <ScrollView contentContainerStyle = {styles.infoCoupon}>
                     <Text style = {styles.nameCoupon}>
                         {coupon.nombre}
                     </Text>
@@ -103,7 +103,7 @@ export default class Coupon extends Component {
 
                     </View>
 
-                </View>
+                </ScrollView>
             </View>
         )
     }
@@ -138,6 +138,15 @@ export default class Coupon extends Component {
                 <View style = {styles.flatlist}>
                     {this.renderCoupon(this.state.coupon)}
                 </View>
+
+                <TouchableOpacity style = {styles.privacy}onPress = {() => {
+                        Linking.openURL('https://gangazos.herokuapp.com/politicas').catch((err) => console.error('An error occurred', err));
+                    }}>
+                        <Text style = {styles.privacyText}>
+                            Politicas de privacidad
+                        </Text>
+                    </TouchableOpacity>
+
             </View>
         );
     }
@@ -152,7 +161,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#260a81',
   },
 
+  privacy: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 20,
+    alignSelf: 'stretch',
+    backgroundColor: 'white'
+  },
+
+  privacyText: {
+    fontSize: 10
+  },
+
   direccion: {
+    marginVertical: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -226,7 +248,6 @@ const styles = StyleSheet.create({
   },
 
   infoCoupon: {
-    flex: 1,
     backgroundColor: 'white',
     alignItems: 'center',
     paddingVertical: 5,
